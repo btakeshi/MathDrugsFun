@@ -1,24 +1,14 @@
 # GAS admin directory sdk
 
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+> [!NOTE] 
+> Userful information wao!
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
-
-> [!NOTE]
-Userful information wao!
 
 ## グループを作成する
+
+クラス単位でGoogleDriveへのアクセス制限をかけたりしたいので、グループを作成しています。
+手作業では面倒なので**GAS**で解決する方法をメモ。
 
 ```java
 function createNewGroup() {
