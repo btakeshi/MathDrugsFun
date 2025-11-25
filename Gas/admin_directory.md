@@ -18,7 +18,7 @@
 > [!NOTE]
 > Userful information wao!
 
-```
+```java
 function createNewGroup(email, name, description) {
   // グループ作成に必要なリソースオブジェクト
   const groupResource = {
