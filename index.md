@@ -14,4 +14,7 @@ waowao
 
 ### emacsでMarkdown
 
+emacsを立ち上げて,
+M-x package-install
+markdown-mode(ENTER)
 
