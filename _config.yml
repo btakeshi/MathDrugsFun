@@ -6,3 +6,5 @@ tagline: [A very short description of your site's purpose, used as subtitle]
 description: [A short description of your site's purpose (e.g. for search engines)]
 show_downloads: false
 google_analytics: [Your Google Analytics tracking ID]
+
+lang: ja_JP
