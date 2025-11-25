@@ -15,6 +15,8 @@ waowao
 ### emacsでMarkdown
 
 emacsを立ち上げて,
-M-x package-install
-markdown-mode(ENTER)
+`M-x package-install`(ENTER),
+`markdown-mode`(ENTER)とすればインストールされる。
+
+とりあえず色もついて使える感じ。
 
