@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # TikZ作品集
 
 TeXTikZで作った図の保管庫です。
