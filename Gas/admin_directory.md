@@ -16,41 +16,30 @@
 > Advises about risks or negative outcomes of certain actions.
 
 > [!NOTE]
-> Userful information wao!
+Userful information wao!
+
+## グループを作成する
 
 ```java
-function createNewGroup(email, name, description) {
-  // グループ作成に必要なリソースオブジェクト
-  const groupResource = {
-    // 必須
-    'email': email,
-    'name': name,
-    
-    // オプション
-    'description': description || 'GASで作成されたグループ',
-  };
+function createNewGroup() {
+  // 登録したいグループのデータを作成する
+  const newGroupData = {
+    'email': "waowao@suwa.tokai.ed.jp",
+    'name': "わおわお",
+    'desctiption': "ここにグループの説明"
+  }
 
-  try {
-    // AdminDirectory.Groups.insert() を使用してグループを作成
-    const newGroup = AdminDirectory.Groups.insert(groupResource);
-    
-    Logger.log('✅ グループが正常に作成されました: ' + newGroup.email);
-    Logger.log('グループID: ' + newGroup.id);
-    
-    return newGroup;
-    
-  } catch (e) {
-    // エラー処理
-    Logger.log('❌ グループ作成中にエラーが発生しました: ' + e.toString());
-    
-    // Admin権限がない、メールアドレスが既に存在、ドメインが正しくないなどの可能性がある
-    if (e.message && e.message.includes("Domain not found")) {
-      Logger.log("ヒント: ドメインが存在しないか、AdminDirectory APIが有効化されていません。");
-    } else if (e.message && e.message.includes("Entity already exists")) {
-      Logger.log("ヒント: 指定されたメールアドレスは既に存在します。");
-    }
-    
-//    throw new Error('グループ作成に失敗しました: ' + e.message);
+  try
+  {
+    //-----処理-----//
+    const newGroup = AdminDirectory.Groups.insert(newGroupData);
+    Logger.log("グループが正常に作成されました。" + newGroup.email);
+  }
+  catch (e)
+  {
+    //-----エラー-----//
+    Logger.log("グループが作れませんでした。");
+    Logger.log(e.message);
   }
 }
 ```
