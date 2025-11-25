@@ -1,3 +1,6 @@
+---
+layout: toppage
+---
 # ますどら
 
 waowao
