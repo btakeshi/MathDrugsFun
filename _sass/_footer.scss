@@ -1,0 +1,65 @@
+/* フッター全体のスタイル */
+.site-footer {
+  margin-top: 5rem;
+  padding: 0;
+  background-color: #fffaf5; /* 非常に淡いオレンジの背景 */
+  border-top: 1px solid #ffe8cc;
+}
+.footer-content {
+  max-width: 800px; /* 本文のcontainer幅に合わせる */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-heading {
+  font-size: 0.9rem;
+  color: #d9480f;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+/* 記事リストのスタイル */
+.footer-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-post-list li {
+  display: flex;
+  align-items: baseline;
+  padding: 2px 0;
+  border-bottom: 1px dashed #ffd8a8;
+  font-size: 0.9rem;
+}
+.footer-post-list li:last-child {
+  border-bottom: none;
+}
+
+.footer-post-date {
+  font-size: 0.75rem;
+  color: #adb5bd;
+  font-family: monospace; /* 日付を等幅フォントにして揃える */
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.footer-post-link {
+  text-decoration: none;
+  color: #495057;
+  transition: color 0.2s;
+  /* 長いタイトルを三点リーダーで省略する場合 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer-post-link:hover {
+  color: #f08c00;
+  text-decoration: underline;
+}
+
+/* フッター最下部 */
+.footer-bottom {
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #adb5bd;
+}

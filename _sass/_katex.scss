@@ -1,0 +1,13 @@
+/* 左寄せにした数式の左側に少し余白を作る */
+.katex-display {
+  padding-left: 2rem; /* 本文のインデントに合わせて調整してください */
+  margin: 1em 0;      /* 上下の余白 */
+}
+
+/* スマホでは余白を少し狭める */
+@media (max-width: 600px) {
+  .katex-display {
+    padding-left: 1rem;
+    overflow-x: auto; /* 長い数式が画面を突き抜けないように横スクロールを許可 */
+  }
+}

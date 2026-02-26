@@ -1,6 +1,1 @@
-# MathDrugsFun #
-
-ますどら
-
-## waowao ##
-
+# btakeshi.github.io

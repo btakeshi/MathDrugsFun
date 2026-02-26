@@ -1,0 +1,33 @@
+<header class="main-header">
+  <!-- 上段：メインナビゲーション（左寄せ・小さめ・アクセント色） -->
+  <nav class="top-nav">
+    <a href="{{ "/" | relative_url }}">Home</a>
+    <a href="{{ "/about" | relative_url }}">About</a>
+  </nav>
+
+  <!-- 中段：サイトタイトル（中央付近に堂々と） -->
+  <div class="site-branding">
+    <a href="{{ "/" | relative_url }}">
+      <img src="{{ "/assets/images/myself.png" | relative_url }}" alt="" class="site-icon">
+      {% if page.url == "/" or page.url == "/index.html" %}
+        <h1 class="site-title">{{ site.title }}</h1>
+      {% else %}
+        <span class="site-title">{{ site.title }}</span>
+      {% endif %}
+    </a>
+  </div>
+
+  <!-- 下段：ユーザーパーツ（右寄せ・控えめサイズ） -->
+  <div id="auth-section" class="auth-section">
+    <button id="login-btn" class="btn-text-only" style="display: none;">Googleでログイン</button>
+    
+    <div id="user-info" class="user-profile-mini" style="display: none;">
+      <a href="{{ "/mypage" | relative_url }}" class="user-link">
+        <img id="user-avatar" src="" alt="" class="user-avatar-mini">
+        <span id="user-name" class="user-nickname-mini"></span>
+      </a>
+      <span class="divider">|</span>
+      <button id="logout-btn" class="btn-text-only">ログアウト</button>
+    </div>
+  </div>
+</header>

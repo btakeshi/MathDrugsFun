@@ -1,0 +1,94 @@
+---
+layout: post
+title: 解と係数の関係
+permalink: /tools/kaitokeisuu/
+---
+
+<!-- 【追加】説明ブロック：このページで何ができるかを書く -->
+<div class="tool-description">
+  ２次方程式の２つの解を$\alpha$, $\beta$とおくと
+</div>
+
+<div class="tool-description">
+  
+  直角三角形の2辺の長さ（底辺 $a$ と高さ $b$）を入力すると、斜辺の長さ $c$ を求めます。
+  三平方の定理 $a^2 + b^2 = c^2$ を使った、ステップごとの計算過程も確認できます。
+</div>
+
+<!-- 入力エリア -->
+<div class="solver-box">
+  <div class="input-row">
+    <label>底辺 a: <input type="number" id="val-a" value="3"></label>
+    <label>高さ b: <input type="number" id="val-b" value="4"></label>
+    <button id="btn-exec" class="btn-exec">計算開始</button>
+  </div>
+</div>
+
+<!-- 結果エリア：最初から表示しておく -->
+<div id="results-area">
+  <!-- 初期メッセージ -->
+  <div id="placeholder-msg" class="placeholder-message">
+    【ここに計算の解法が表示されます】
+  </div>
+
+  <!-- 計算開始後に表示される要素 -->
+  <div id="step-nav" class="step-nav"></div>
+  <div id="step-display"></div>
+</div>
+
+<script src="{{ "/assets/js/explain.js" | relative_url }}"></script>
+
+<script>
+ToolEngine.init(function() {
+  const a = parseFloat(document.getElementById('val-a').value);
+  const b = parseFloat(document.getElementById('val-b').value);
+  
+  if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) return null;
+
+  const c2 = a * a + b * b; // cの2乗
+  const c_root = simplifyRadical(c2); // ルート表記を取得
+  const c_decimal = Math.sqrt(c2).toFixed(2); // 小数表記（参考用）
+
+  return [
+    { 
+      title: "公式", 
+      content: "三平方の定理 $a^2 + b^2 = c^2$ を利用します。" 
+    },
+    { 
+      title: "代入", 
+      content: `$${a}^2 + ${b}^2 = c^2$ より、<br>$c^2 = ${a*a} + ${b*b} = ${c2}$ となります。` 
+    },
+    { 
+      title: "代入2", 
+      content: `$${a}^2 + ${b}^2 = c^2$ より、<br>$c^2 = ${a*a} + ${b*b} = ${c2}$ となります。` 
+    },
+    { 
+      title: "結論", 
+      content: `答えは $c = ${c_root}$ です。<br><span style="font-size:0.8rem; color:#888;">(小数では 約 ${c_decimal})</span>` 
+    }
+  ];
+});
+
+/**
+ * 数値を √n の形から k√m の形に簡略化する関数
+ * 例: 12 -> 2√3, 25 -> 5, 13 -> √13
+ */
+function simplifyRadical(n) {
+  if (n === 0) return "0";
+  let k = 1;
+  let m = n;
+
+  // n の中から最大の平方数 (i*i) を探す
+  for (let i = Math.floor(Math.sqrt(n)); i >= 2; i--) {
+    if (n % (i * i) === 0) {
+      k = i;
+      m = n / (i * i);
+      break;
+    }
+  }
+
+  if (m === 1) return `${k}`; // 整数になる場合 (例: √25 -> 5)
+  if (k === 1) return `\\sqrt{${m}}`; // 簡略化できない場合 (例: √13)
+  return `${k}\\sqrt{${m}}`; // 簡略化できる場合 (例: 2\sqrt{3})
+}
+</script>

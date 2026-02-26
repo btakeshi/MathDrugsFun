@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    <!-- トップページ（/）以外のときだけ新着記事リストを表示 -->
+    {% unless page.url == "/" or page.url == "/index.html" %}
+      <div class="footer-recent-posts">
+        <h3 class="footer-heading">Recent Posts</h3>
+        <ul class="footer-post-list">
+          {% assign limit = site.footer_recent_posts_limit | default: 5 %}
+          {% for post in site.posts limit: limit %}
+            <li>
+              <span class="footer-post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+              <a href="{{ post.url | relative_url }}" class="footer-post-link">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endunless %}
+
+    <!-- コピーライト（これは全ページで表示） -->
+    <div class="footer-bottom">
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
+    </div>
+    
+  </div>
+</footer>

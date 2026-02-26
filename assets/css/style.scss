@@ -1,0 +1,11 @@
+---
+# Jekyllはこのフロントマターを見て、SCSSをCSSに変換します
+---
+
+@import "style";
+@import "header";
+@import "footer";
+@import "post";
+@import "sns-share";
+@import "katex";
+@import "explain";

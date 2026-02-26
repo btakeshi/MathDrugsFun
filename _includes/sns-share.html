@@ -1,0 +1,13 @@
+<div class="sns-share">
+  <p class="share-title">SHARE</p>
+  <div class="share-buttons">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" rel="nofollow noopener noreferrer" class="share-btn x-btn">X</a>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" rel="nofollow noopener noreferrer" class="share-btn fb-btn">FB</a>
+
+    <a href="https://social-plugins.line.me/lineit/share?url={{ site.url }}{{ page.url | url_encode }}" 
+       target="_blank" rel="nofollow noopener noreferrer" class="share-btn line-btn">LINE</a>
+  </div>
+</div>

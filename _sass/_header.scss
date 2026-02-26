@@ -1,0 +1,135 @@
+/* ヘッダー全体の余白 */
+.main-header {
+    margin: 10px 0;
+    padding: 0;
+}
+
+
+/* 1段目：ナビゲーション */
+.top-nav {
+  text-align: left;
+  font-size: 0.85rem; /* 小さめ */
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+.top-nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #6a737d; /* 落ち着いたグレー */
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.top-nav a:hover {
+  color: #4a90e2; /* 控えめな青のアクセント */
+}
+
+
+/* 2段目：サイトタイトル */
+.site-branding {
+  padding: 0;
+}
+
+/* サイトタイトルエリアのデザイン（淡いバージョン） */
+.site-branding a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  
+  /* 淡いオレンジの設定 */
+  background-color: #fff4e6;   /* 非常に淡いピーチオレンジ */
+  border: 1px solid #ffe8cc;   /* 背景より少しだけ濃い枠線 */
+  padding: 8px 16px;           /* 余白を少しタイトに */
+  border-radius: 12px;         /* 角丸を控えめに（12pxくらいが程よい） */
+  
+  transition: background-color 0.2s;
+}
+/* ホバー時に少しだけ色を濃くする */
+.site-branding a:hover {
+  background-color: #ffe8cc;
+  transform: none;             /* 浮き上がる動きを止めて落ち着かせる */
+}
+/* アイコンの調整 */
+.site-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;          /* アイコンの角丸も本体に合わせる */
+  margin-right: 10px;
+  border: 2px solid white;
+  background-color: darkorange;
+}
+/* サイトタイトルの文字色 */
+.site-title {
+    font-size: 1.3rem;
+    color: #d9480f !important;   /* 濃いめの落ち着いたオレンジ（テラコッタ風） */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .site-branding a {
+	padding: 6px 12px;
+    }
+    .site-title {
+	font-size: 1.1rem;
+    }
+}
+
+
+
+/* 3段目：ユーザーセクション */
+.auth-section {
+  display: flex;
+  justify-content: flex-end; /* 右寄せ */
+  margin-top: 5px;
+  padding-right: 10px;
+}
+.user-profile-mini {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem; /* 小さめ */
+  color: #586069;
+}
+
+.user-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-link:hover {
+  text-decoration: underline;
+}
+
+.user-avatar-mini {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.user-nickname-mini {
+  font-weight: 600;
+}
+
+.divider {
+  margin: 0 8px;
+  color: #e1e4e8;
+}
+
+/* ボタンをテキスト風に */
+.btn-text-only {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #586069;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-text-only:hover {
+  color: #24292e;
+  text-decoration: underline;
+}

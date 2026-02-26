@@ -1,0 +1,52 @@
+/* SNSシェアセクション */
+.sns-share {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.share-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #adb5bd;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* テキストボタンの基本スタイル */
+.share-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.75rem;      /* 小さめの文字 */
+  font-weight: bold;
+  color: #ffffff !important;
+  padding: 8px 16px;       /* ほどよい余白 */
+  border-radius: 4px;      /* 控えめな角丸 */
+  transition: opacity 0.2s;
+  min-width: 50px;         /* 最低限の幅を確保 */
+  text-align: center;
+}
+
+.share-btn:hover {
+  opacity: 0.7;
+}
+
+/* SNS各色の設定（シンプルな色味） */
+.x-btn { background-color: #333; }      /* X はダークグレー */
+.fb-btn { background-color: #4c66a4; }   /* FB は少し落ち着いた紺 */
+.line-btn { background-color: #51b951; } /* LINE は少し落ち着いた緑 */
+
+/* スマホ対応：タップしやすく少し大きく */
+@media (max-width: 600px) {
+  .share-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}

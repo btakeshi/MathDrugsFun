@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%Y-%m-%d" }}</p>
+  {{ content }}
+
+  <!-- SNSシェアボタンを追加 -->
+  {% include sns-share.html %}
+</article>
